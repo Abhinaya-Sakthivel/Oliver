@@ -13,7 +13,9 @@ public class LoginTest {
     public void setup() {
         System.out.println("Running Before Class");
         driver = new ChromeDriver();
-        driver.get("http://localhost:63342/Login/__files/index.html?_ijt=sg2jjlql4fbjraktle16m68god&_ij_reload=RELOAD_ON_SAVE");
+        driver.get("http://localhost:63342/Login/__files/index.html?_ijt=rbehtlbvl42uju1le6qpc2vu3v&_ij_reload=RELOAD_ON_SAVE");
+
+
 
     }
 
@@ -25,5 +27,6 @@ public class LoginTest {
         loginPage.SetCodeAndClickNext(code);
         loginPage.FillMaskedPasswordAndClickLogin("DevSkill1!");
         loginPage.GetLoggedInText();
+        driver.quit();
     }
 }
